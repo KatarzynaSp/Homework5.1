@@ -1,13 +1,34 @@
 class Room {
-    double size;
-    double temperature;
-    boolean airConditioning;
-    int limit = 20;
+    private double size;
+    private double temperature;
+    private boolean airConditioning;
+    private int limit = 20;
 
-    Room(double size, double temp, boolean ac) {
+    public Room() {
+    }
+
+    public double getSize() {
+        return size;
+    }
+
+    public void setSize(double size) {
         this.size = size;
-        temperature = temp;
-        airConditioning = ac;
+    }
+
+    public double getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(double temperature) {
+        this.temperature = temperature;
+    }
+
+    public boolean isAirConditioning() {
+        return airConditioning;
+    }
+
+    public void setAirConditioning(boolean airConditioning) {
+        this.airConditioning = airConditioning;
     }
 
     boolean tempDown() {
@@ -17,5 +38,14 @@ class Room {
         } else {
             return false;
         }
+    }
+
+    protected void showInfo() {
+        System.out.println("Pokój ma " + getSize() + "mkw. \nW pokoju jest klimatyzacja: " + isAirConditioning() + "\n" +
+                "Temperatura w pokoju wynosi: " + getTemperature() + "stopni C.");
+    }
+
+    protected void showInfo2() {
+        System.out.println("Temperatura w pokoju wynosi: " + getTemperature() + "stopni C.");
     }
 }

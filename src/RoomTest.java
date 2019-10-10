@@ -1,27 +1,37 @@
 class RoomTest {
-        public static void main(String[] args) {
-        Room room1 = new Room(34, 25, true);
-        System.out.println("Pokój ma " + room1.size + "mkw. \nW pokoju jest klimatyzacja: " + room1.airConditioning + "\n" +
-                "Temperatura w pokoju wynosi: " + room1.temperature + "stopni C.");
-        room1.tempDown();
-        System.out.println("Temperatura w pokoju wynosi: " + room1.temperature + "stopni C.\n");
+    public static void main(String[] args) {
+        Room room1 = new Room();
+        room1.setSize(34);
+        room1.setTemperature(25);
+        room1.setAirConditioning(true);
 
-        Room room2 = new Room(34, 15, true);
-        System.out.println("Pokój ma " + room2.size + "mkw. \nW pokoju jest klimatyzacja: " + room2.airConditioning + "\n" +
-                "Temperatura w pokoju wynosi: " + room2.temperature + "stopni C.");
+        room1.showInfo();
         room1.tempDown();
-        System.out.println("Temperatura w pokoju wynosi: " + room2.temperature + "stopni C.\n");
+        room1.showInfo2();
 
-        Room room3 = new Room(34, 15, false);
-        System.out.println("Pokój ma " + room3.size + "mkw. \nW pokoju jest klimatyzacja: " + room3.airConditioning + "\n" +
-                "Temperatura w pokoju wynosi: " + room3.temperature + "stopni C.");
-        room1.tempDown();
-        System.out.println("Temperatura w pokoju wynosi: " + room3.temperature + "stopni C.\n");
+        Room room2 = new Room();
+        room2.setSize(34);
+        room2.setTemperature(15);
+        room2.setAirConditioning(true);
+        room2.showInfo();
+        room2.tempDown();
+        room2.showInfo2();
 
-        Room room4 = new Room(34, 25, false);
-        System.out.println("Pokój ma " + room4.size + "mkw. \nW pokoju jest klimatyzacja: " + room4.airConditioning + "\n" +
-                "Temperatura w pokoju wynosi: " + room4.temperature + "stopni C.");
-        room1.tempDown();
-        System.out.println("Temperatura w pokoju wynosi: " + room4.temperature + "stopni C.\n");
+        Room room3 = new Room();
+        room3.setSize(34);
+        room3.setTemperature(15);
+        room3.setAirConditioning(false);
+        room3.showInfo();
+        room3.tempDown();
+        room3.showInfo2();
+
+        Room room4 = new Room();
+        room4.setSize(34);
+        room4.setTemperature(25);
+        room4.setAirConditioning(false);
+
+        room4.showInfo();
+        room4.tempDown();
+        room4.showInfo2();
     }
 }
