@@ -7,6 +7,12 @@ class Room {
     public Room() {
     }
 
+    public Room(double size, double temp, boolean ac) {
+        this.size = size;
+        temperature = temp;
+        airConditioning = ac;
+    }
+
     public double getSize() {
         return size;
     }
@@ -38,14 +44,5 @@ class Room {
         } else {
             return false;
         }
-    }
-
-    protected void showInfo() {
-        System.out.println("Pokój ma " + getSize() + "mkw. \nW pokoju jest klimatyzacja: " + isAirConditioning() + "\n" +
-                "Temperatura w pokoju wynosi: " + getTemperature() + "stopni C.");
-    }
-
-    protected void showInfo2() {
-        System.out.println("Temperatura w pokoju wynosi: " + getTemperature() + "stopni C.");
     }
 }

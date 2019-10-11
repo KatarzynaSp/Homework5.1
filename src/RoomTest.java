@@ -1,37 +1,33 @@
 class RoomTest {
+    static void showInfo(Room room) {
+                System.out.println("Pokój ma " + room.getSize() + "mkw. \nW pokoju jest klimatyzacja: " + room.isAirConditioning() + "\n" +
+                "Temperatura w pokoju wynosi: " + room.getTemperature() + "stopni C.");
+    }
+
+    static void showTemp(Room room) {
+           System.out.println("Temperatura w pokoju wynosi: " + room.getTemperature() + "stopni C.");
+    }
+
     public static void main(String[] args) {
-        Room room1 = new Room();
-        room1.setSize(34);
-        room1.setTemperature(25);
-        room1.setAirConditioning(true);
 
-        room1.showInfo();
+        Room room1 = new Room(34, 25, true);
+        showInfo(room1);
         room1.tempDown();
-        room1.showInfo2();
+        showTemp(room1);
 
-        Room room2 = new Room();
-        room2.setSize(34);
-        room2.setTemperature(15);
-        room2.setAirConditioning(true);
-        room2.showInfo();
+        Room room2 = new Room(34, 15, true);
+        showInfo(room2);
         room2.tempDown();
-        room2.showInfo2();
+        showTemp(room2);
 
-        Room room3 = new Room();
-        room3.setSize(34);
-        room3.setTemperature(15);
-        room3.setAirConditioning(false);
-        room3.showInfo();
+        Room room3 = new Room(34, 15, false);
+        showInfo(room3);
         room3.tempDown();
-        room3.showInfo2();
+        showTemp(room3);
 
-        Room room4 = new Room();
-        room4.setSize(34);
-        room4.setTemperature(25);
-        room4.setAirConditioning(false);
-
-        room4.showInfo();
+        Room room4 = new Room(34, 25, false);
+        showInfo(room4);
         room4.tempDown();
-        room4.showInfo2();
+        showTemp(room4);
     }
 }
