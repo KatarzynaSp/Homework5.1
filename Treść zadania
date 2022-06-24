@@ -1,0 +1,10 @@
+Treść zadania:
+
+Klasa Room reprezentuje pokój i przechowuje informacje o jego metrażu oraz aktualnej temperaturze. Pokój może mieć zamontowany klimatyzator bądź nie.
+Zdefiniuj w klasie Room metodę, po której wywołaniu temperatura spada w pomieszczeniu o 1 stopień Celsjusza. Temperatura powinna być obniżana tylko wtedy, gdy w pokoju zamontowany jest klimatyzator. Ustaw także temperaturę graniczną, poniżej której nie może spaść temperatura (powinna istnieć możliwość definiowania tej temperatury dla różnych pomieszczeń osobno). Metoda powinna zwracać true, jeżeli udało się obniżyć temperaturę, lub false jeżeli w pokoju nie ma klimatyzatora lub osiągnięto temperaturę graniczną.
+Klasa Room nie powinna zawierać metod print/println.
+W osobnej klasie przetestuj działanie zdefiniowanej metody poprzez jej kilkukrotne wywołanie i wyświetlenie informacji o pokoju.
+
+Wskazówki:
+Temperatura powinna być zapisana jako liczba zmiennoprzecinkowa
+Zwróć uwagę, żeby nie zejść niżej niż temperatura graniczna. W przypadku, gdy aktualna temperatura to 21.5*C, a minimalna 21*C, to po uruchomieniu schładzania oczekujemy, że w pokoju będzie 21*C (a nie 20.5*C)
